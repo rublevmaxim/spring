@@ -7,8 +7,12 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="musicBean"
-          class="ru.alishev.springcourse.RockMusic">
+    <bean id="FolkMusic"
+          class="ru.alishev.springcourse.FolkMusic">
+    </bean>
+
+    <bean id="ClassicalMusic"
+          class="ru.alishev.springcourse.ClassicalMusic">
     </bean>
 
 </beans>
