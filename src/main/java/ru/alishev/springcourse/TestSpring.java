@@ -11,40 +11,13 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        Music music = context.getBean("ClassicalMusic", Music.class);
-       // Music music1 = context.getBean("FolkMusic", Music.class);
+        //Music music = context.getBean("rockMusic", Music.class);
+        //MusicPlayer musicPlayer=context.getBean("musicPlayer",MusicPlayer.class);
+        //MusicPlayer musicPlayer=new MusicPlayer(music);
+        //musicPlayer.playMusic();
 
-
-        MusicPlayer musicPlayer = new MusicPlayer(music);
-        musicPlayer.playMusic();
-
-        //scope singletone
-        MusicPlayer musicPlayer1 = context.getBean("musicPlayer1", MusicPlayer.class);//Внедрение через setter
-        musicPlayer1.playMusic();
-        System.out.println(musicPlayer1.getName());
-        System.out.println(musicPlayer1.getVolume());
-
-        MusicPlayer secondMusicPlayer1= context.getBean("musicPlayer1", MusicPlayer.class);//Внедрение через setter
-        secondMusicPlayer1.setName("Valenki");
-        secondMusicPlayer1.setVolume(-50);
-        secondMusicPlayer1.playMusic();
-        System.out.println(secondMusicPlayer1.getName());
-        System.out.println(secondMusicPlayer1.getVolume());
-
-        musicPlayer1.playMusic();
-        System.out.println(musicPlayer1.getName());
-        System.out.println(musicPlayer1.getVolume());
-
-        boolean comparison = musicPlayer1 == secondMusicPlayer1;
-        System.out.println(comparison);
-        System.out.println(musicPlayer1);
-        System.out.println(secondMusicPlayer1);
-
-        //end scope singletone
-
-        MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);//Внедрение через constructor
-        musicPlayer2.playMusic();
-
+        Computer computer=context.getBean("computer",Computer.class);
+        System.out.println(computer);
 
         context.close();
     }
