@@ -9,7 +9,7 @@ import org.w3c.dom.ls.LSOutput;
 /**
  * @author Neil Alishev
  */
-@Component
+
 public class MusicPlayer {
     //@Autowired -Рефлексия. Внедрение зависимости в приватное поле
     //@Autowired
@@ -26,7 +26,7 @@ public class MusicPlayer {
     @Value("${musicPlayer.volume}")
     private int volume;
 
-      @Autowired
+
       public MusicPlayer(@Qualifier("classicalMusic") Music music1,@Qualifier("rockMusic") Music music2)
       {
           this.music1 = music1;
